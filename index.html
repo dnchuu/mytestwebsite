@@ -1,25 +1,255 @@
-<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>첫 번째 페이지ㅋ</title>
+    <title>Lang Chai Seafood Restaurant</title>
     <style>
-        body { text-align: center; padding: 50px; font-family: Arial, sans-serif; }
-        button { padding: 10px 20px; font-size: 18px; cursor: pointer; }
+        @font-face {
+            font-family: 'TDTD';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/tdtd귀여워귀여워.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background: #ff6b00;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .nav-button:hover {
+            background: #ff8533;
+        }
+
+        /* Main Content Styles */
+        main {
+            margin-top: 80px;
+        }
+
+        .section {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 1cm 2rem;
+            min-height: auto;
+        }
+
+        .section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* 순서 변경을 위한 스타일 추가 */
+    .section:nth-child(2) .content-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section:nth-child(2) .image-content {
+        order: 2;  /* 이미지를 텍스트 뒤로 보냄 */
+    }
+
+    .section:nth-child(2) .text-content {
+        order: 1;  /* 텍스트를 이미지 앞으로 보냄 */
+    }
+}
+
+        .text-content {
+            flex: 1;
+        }
+
+        .image-content {
+            flex: 1;
+        }
+
+        .image-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border: 2px solid #ff6b00;
+            border-radius: 5px;
+            color: #ff6b00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ff6b00;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .nav-button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+         /* 메뉴 이미지 스타일 */
+         .menu-container {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1mm; /* 이미지 간격 1mm */
+        }
+
+        .menu-image {
+            width: 80%; /* 이미지 크기 조절 */
+            max-width: 800px;
+            height: auto;
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
-    <h1>첫 번째 페이지ㅋ</h1>
-    <button onclick="goToPage2()">두 번째 페이지로 이동</button>
-    <br><br>
-    <img src="images/003.jpg" alt="이미지" width="300" height="300">
-    <img src="images/002.jpg" alt="이미지2" width="300" height="300">
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="Lang Chai Logo">
+        </a>
+        <div class="nav-buttons">
+            <button class="nav-button" onclick="location.href='menu.html'">메뉴</button>
+            <button class="nav-button" onclick="location.href='reservation.html'">예약</button>
+        </div>
+    </header>
+    
 
-    <script>
-        function goToPage2() {
-            window.location.href = "page2.html"; // page2.html로 이동
-        }
-    </script>
+
+    <main>
+        <section class="section">
+            <div class="content-container">
+                <div class="text-content">
+                    <h2 style="line-height: 1.1; font-family: 'TDTD', sans-serif;">LANG CHAI<br>SEE FOOD<br>RESTAURANT</h2>
+                    <p>2023년에 개장한 랑차이 해산물 식당은 고객님들의 많은 사랑을 받으며 빠른 속도로 성장하였습니다. 대부분의 해산물은 생물을 사용하며 자체 얼음 기계를 보유하고 있기에 위생과 신선도를 최상으로 유지하고 있습니다.</p>
+                    <a href="menu.html" class="cta-button">다낭 해산물 맛집!</a>
+                </div>
+                <div class="image-content">
+                    <img src="images/001.jpg" alt="해산물 요리">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="content-container">
+                <div class="image-content">
+                    <img src="images/002.jpg" alt="Lang Chai 외관">
+                </div>
+                <div class="text-content">
+                    <h2 style="line-height: 1.1; font-family: 'TDTD', sans-serif;">다양한 해산물이<br>여러분을<br>기다리고 있습니다.</h2>
+                    <p>2023년에 개장한 랑차이 해산물 식당은 고객님들의 많은 사랑을 받으며 빠른 속도로 성장하였습니다. 대부분의 해산물은 생물을 사용하며 자체 얼음 기계를 보유하고 있기에 위생과 신선도를 최상으로 유지하고 있습니다.</p>
+                    <a href="reservation.html" class="cta-button">최고의 맛과 서비스로 대접하겠습니다.</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="content-container">
+                <div class="text-content">
+                    <h2 style="line-height: 1.1; font-family: 'TDTD', sans-serif;">1, 2 층 최대 500명<br>수용 가능한 규모.<br>VIP룸 까지!</h2>
+                    <p>가족, 연인, 친구, 회식 등 대규모 모임도 거뜬히 수용가능한 넓넉한 장소와 프라이빗한 개인룸까지 구비되어 있습니다.</p>
+                    <a href="reservation.html" class="cta-button">소중한 추억을 만들어 보세요!</a>
+                </div>
+                <div class="image-content">
+                    <img src="images/003.jpg" alt="식당 내부">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+<!-- 푸터 추가 -->
+<footer style="background-color: #f5f5f5; padding: 20px; text-align: center; color: #666; margin-top: 30px;">
+    <div style="max-width: 800px; margin: 0 auto; line-height: 0.3;">
+        <p style="margin: 0; padding: 0;">[카카오톡] langchai</p>
+        <p style="margin: 0; padding: 0;">[이메일] langchai@gmail.com</p>
+        <p style="margin: 0; padding: 0;">[전화번호] 0339.333.333</p>
+        <p style="margin: 0; padding: 0;">[주소] 10 Võ Văn Kiệt, Phước Mỹ, Sơn Trà, Đà Nẵng</p>
+    </div>
+</footer>
 </body>
 </html>

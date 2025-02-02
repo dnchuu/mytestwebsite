@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lang Chai Seafood Restaurant</title>
+    <style>
+        /* 기존 스타일 유지 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+	margin-right: 30px;
+
+        }
+
+        .nav-button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background: #ff6b00;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        /* 메뉴 이미지 스타일 */
+        .menu-container {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1mm; /* 이미지 간격 1mm */
+        }
+
+        .menu-image {
+            width: 80%; /* 이미지 크기 조절 */
+            max-width: 800px;
+            height: auto;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="Lang Chai Logo">
+        </a>
+        <div class="nav-buttons">
+            <button class="nav-button" onclick="location.href='menu.html'">메뉴</button>
+            <button class="nav-button" onclick="location.href='reservation.html'">예약</button>
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <img src="images/menu/01.jpg" alt="메뉴1" class="menu-image">
+        <img src="images/menu/02.jpg" alt="메뉴2" class="menu-image">
+        <img src="images/menu/03.jpg" alt="메뉴3" class="menu-image">
+        <img src="images/menu/04.jpg" alt="메뉴4" class="menu-image">
+        
+        
+        
+        <!-- 나중에 03.jpg 추가시:
+        <img src="images/menu/03.jpg" alt="메뉴3" class="menu-image"> -->
+    </div>
+</body>
+</html>
